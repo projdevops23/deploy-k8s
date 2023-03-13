@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker build -t devopss23/java-app'
+        sh 'sudo docker build -t devopss23/java-app .'
       }
     }
     stage('Login') {
