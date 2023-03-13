@@ -13,7 +13,7 @@ pipeline {
     
     stage('Build') {
       steps {
-        sh 'sudo docker build -t devopss23/java-app .'
+        sh 'sudo docker build -t devopss23/java-app /home/trainee/target/spring-boot-thymeleaf-example-0.0.1-SNAPSHOT.war'
       }
     }
     stage('Login') {
