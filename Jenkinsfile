@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker build -t devopss23/java-app${BUILD_NUMBER} .'
+        sh 'sudo docker build -t devopss23/java-app:${BUILD_NUMBER} .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'sudo docker push devopss23/java-app${BUILD_NUMBER}:latest'
+        sh 'sudo docker push devopss23/java-app:${BUILD_NUMBER}'
       }
     }
   }
