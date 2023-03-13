@@ -76,6 +76,18 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<executions>
+					<execution>
+						<id>check-headers</id>
+						<phase>verify</phase>
+						<goals>
+							<!--<goal>check</goal>-->
+							<goal>format</goal>
+							<!--<goal>remove</goal>-->
+						</goals>
+					</execution>
+				</executions>
+		
 	</build>
 
 </project>
