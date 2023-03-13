@@ -7,6 +7,10 @@ pipeline {
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
   }
   stages {
+//     stage('getDirectory') {
+//       sh 'sudo scp /var/jenkins_home/workspace/java-web/target/spring-boot-thymeleaf-example-0.0.1-SNAPSHOT.war  /usr/local/tomcat/webapps/ROOT'
+//     }
+    
     stage('Build') {
       steps {
         sh 'sudo docker build -t devopss23/java-app .'
