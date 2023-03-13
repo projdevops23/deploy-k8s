@@ -1,0 +1,15 @@
+stage('Deploy to K8s')
+  {
+   steps{
+    sshagent(['k8s-jenkins'])
+    {
+script{
+      try{
+       sh 'ssh trainee@192.168.56.2 kubectl apply -f /home/trainee/pre-prod/k8s-tomcat-pre-prod.yaml <!-- --kubeconfig=/path/kube.yaml'-->
+}catch(error)
+       {
+}
+     }
+    }
+   }
+  }
